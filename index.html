@@ -42,9 +42,10 @@
       var choices = this;
       var item = $(choices).val();
       console.log(item);
-      var serving = foods[item].water_use[units].serving;
+      var item_amount = foods[item].water_use[units].serving;
       var water_use = foods[item].water_use[units].water;
-      var result = "<p>" + serving + " uses " + water_use + " " + units_label + "<p>";
+      // var result = "<p>" + serving + " uses " + water_use + " " + units_label + "</p>";
+      var result = "<p>" + item_amount + "</p><p>requires</p><p>" + water_use + " " + units_label + "</p><p>to produce</p>";
       $(".result").html(result);
     });
   </script>
