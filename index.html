@@ -9,10 +9,12 @@
 </head>
 
 <body>
-  <select class="select-item">
-  </select>
+  <div class="water-footprint">
+    <select class="select-item">
+    </select>
 
-  <div class="result">
+    <div class="result">
+    </div>
   </div>
 
   <script>
@@ -45,7 +47,7 @@
       var item_amount = foods[item].water_use[units].serving;
       var water_use = foods[item].water_use[units].water;
       // var result = "<p>" + serving + " uses " + water_use + " " + units_label + "</p>";
-      var result = "<p>" + item_amount + "</p><p>requires</p><p>" + water_use + " " + units_label + "</p><p>to produce</p>";
+      var result = "<p class='item-amount'>" + item_amount + "</p><p>requires</p><p class='water-use'>" + water_use + " " + units_label + "</p><p>to produce</p>";
       $(".result").html(result);
     });
   </script>
