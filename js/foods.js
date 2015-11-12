@@ -43,7 +43,7 @@ var foods = {
         "water": "154"
       }
     }
-  }
+  },
 
   "banana": {
     "food_name": "banana",
@@ -51,7 +51,7 @@ var foods = {
       "gallons": {
         "serving": "1 pound of bananas",
         "water": "103"
-      }
+      },
       "water_litres": {
         "per_kg": 790,
         "per_serving": 160,
@@ -178,7 +178,7 @@ var foods = {
         "per_kg": 610
       }
     }
-  }
+  },
 
   "lettuce": {
     "food_name": "lettuce",
@@ -229,7 +229,7 @@ var foods = {
     "food_name": "peach or nectarine",
     "water_use": {
       "water_litres": {
-        "per_kg": 910
+        "per_kg": 910,
         "per_serving": 140,
         "serving": {
           "description": "one peach or nectarine",
@@ -241,7 +241,7 @@ var foods = {
     }
   },
 
-  "pizza":
+  "pizza": {
     "food_name": "pizza (margherita)",
     "water_use": {
       "water_litres": {
