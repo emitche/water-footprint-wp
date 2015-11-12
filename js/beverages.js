@@ -76,5 +76,36 @@ var beverages = {
         }
       }
     }
+  },
+
+  "tea_black": {
+    "food_name": "tea (black)",
+    "water_use": {
+      "water_litres": {
+        "per_serving": 27,
+        "serving": {
+          "description": "one cup of black tea",
+          "volume": {
+            "ml": 250,
+          }
+        }
+      }
+    }
+  },
+
+  "wine": {
+    "food_name": "wine",
+    "water_use": {
+      "water_litres": {
+        "per_litre": 870,
+        "per_serving": 109,
+        "serving": {
+          "description": "one glass of wine",
+          "volume": {
+            "ml": 125,
+          }
+        }
+      }
+    }
   }
 }

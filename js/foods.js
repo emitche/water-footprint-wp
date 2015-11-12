@@ -1,5 +1,4 @@
 var foods = {
-
   "food": {
     "food_name": "food",
     "water_use": {
@@ -172,6 +171,15 @@ var foods = {
     }
   },
 
+  "grapes": {
+    "food_name": "grapes",
+    "water_use": {
+      "water_litres": {
+        "per_kg": 610
+      }
+    }
+  }
+
   "lettuce": {
     "food_name": "lettuce",
     "water_use": {
@@ -222,7 +230,118 @@ var foods = {
     "water_use": {
       "water_litres": {
         "per_kg": 910
+        "per_serving": 140,
+        "serving": {
+          "description": "one peach or nectarine",
+          "weight": {
+            "g": 150,
+          }
+        }
       }
     }
   },
+
+  "pizza":
+    "food_name": "pizza (margherita)",
+    "water_use": {
+      "water_litres": {
+        "per_kg": 1737, // Hand calculated
+        "per_serving": 1259,
+        "serving": {
+          "description": "one pizza",
+          "weight": {
+            "g": 725,
+          }
+        }
+      }
+    }
+  },
+
+  "pork": {
+    "food_name": "pork (meat)",
+    "water_use": {
+      "water_litres": {
+        "per_kg": 5988,
+      }
+    }
+  },
+
+  "potato": {
+    "food_name": "potato",
+    "water_use": {
+      "water_litres": {
+        "per_kg": 287,
+      }
+    }
+  },
+
+  "potato_chips": {
+    "food_name": "potato chips",
+    "water_use": {
+      "water_litres": {
+        "per_kg": 1040,
+      }
+    }
+  },
+
+  "rice": {
+    "food_name": "rice (dry)",
+    "water_use": {
+      "water_litres": {
+        "per_kg": 2497,
+      }
+    }
+  },
+
+  "sheep": {
+    "food_name": "sheep (meat)",
+    "water_use": {
+      "water_litres": {
+        "per_kg": 10412,
+      }
+    }
+  },
+
+  "sugar_beet": {
+    "food_name": "sugar (from sugar beet)",
+    "water_use": {
+      "water_litres": {
+        "per_kg": 920,
+      }
+    }
+  },
+
+  "sugar_beet": {
+    "food_name": "sugar (from sugar cane)",
+    "water_use": {
+      "water_litres": {
+        "per_kg": 1782,
+      }
+    }
+  },
+
+  "black_tea": {
+    "food_name": "black tea, dry",
+    "water_use": {
+      "water_litres": {
+        "per_kg": 8860,
+      }
+    }
+  },
+
+  "tomato": {
+    "food_name": "tomato",
+    "water_use": {
+      "water_litres": {
+        "per_kg": 214,
+        "per_serving": 50,
+        "serving": {
+          "description": "one tomato",
+          "weight": {
+            "g": 250,
+          }
+        }
+      }
+    }
+  }
 }
