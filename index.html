@@ -92,12 +92,15 @@
       if (litre_info) {
         if (litre_info.per_kg) {
           console.log("bulk info available for " + item_key);
+          result = "<p>" + item.food_name + ": " + litre_info.per_kg + " l/kg" + "</p>";
         } else if (litre_info.per_serving) {
           console.log("serving info available for " + item_key);
         } else {
           console.log("Litres info not available for " + item_key);
         }
       }
+
+      $(".result-2").html(result);
     });
   </script>
 
