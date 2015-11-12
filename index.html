@@ -31,11 +31,13 @@
     // Load each food
 
     $.each(foods, function(food, food_info) {
-      $('.select-item').append(
-        "<option class='item " + food + "' value='" + food + "'>"
-        + food_info.food_name +
-        "</option>"
-      );
+      if (food_info.water_use.gallons) {
+        $('.select-item').append(
+          "<option class='item " + food + "' value='" + food + "'>"
+          + food_info.food_name +
+          "</option>"
+        );
+      }
     });
 
     // Display water use on user selection
