@@ -20,6 +20,8 @@
     </select>
 
     <div class="result-2">
+      <div class="one-serving">
+      </div>
     </div>
   </div>
 
@@ -67,7 +69,8 @@
 
     // var units_label = measuring_units[units].label;
 
-    var l_to_gal = 0.264172052358;
+    var L_TO_GAL = 0.264172052358;
+    var KG_TO_LB = 2.205;
 
     $.each(foods, function(food, food_info) {
       if (food_info.water_use.water_litres) {
@@ -79,6 +82,12 @@
       }
     });
 
+    function convert_to_us_units(n) {
+      n = n * L_TO_GAL / KG_TO_LB;
+      n = Math.round(n);
+      return n;
+    }
+
     // Display water use on user selection
 
     $('.select-item-2').on('change', function (e) {
@@ -89,18 +98,31 @@
       var litre_info = item.water_use.water_litres;
       console.log(item);
 
+      var heading = "<h1>" + item.food_name + "</h1>";
+      var result;
+
       if (litre_info) {
         if (litre_info.per_kg) {
           console.log("bulk info available for " + item_key);
-          result = "<p>" + item.food_name + ": " + litre_info.per_kg + " l/kg" + "</p>";
-        } else if (litre_info.per_serving) {
-          console.log("serving info available for " + item_key);
-        } else {
-          console.log("Litres info not available for " + item_key);
+          var bulk = "<p>" + 1 + " kg = " + litre_info.per_kg + " litres of water" + "</p>";
+          var bulk_gallons_lbs = "<p>" + 1 + " lb = " + convert_to_us_units(litre_info.per_kg) + " gallons of water" + "</p>";
+          result = bulk + bulk_gallons_lbs;
         }
+
+        // if (litre_info.per_serving) {
+        //   console.log("serving info available for " + item_key);
+        //   // var serving = "<p>" + litre_info.serving.description + " (" + litre_info.serving.weight + " grams) " + "uses" + litre_info.per_serving + " litres to produce" + "</p>";
+
+        //   var serving = "<p>" + litre_info.serving.description + "</p>";
+        //   result = bulk + serving;
+        // }
+
+      } else {
+        console.log("Litres info not available for " + item_key);
+        result = "<p>No information available.</p>"
       }
 
-      $(".result-2").html(result);
+      $(".result-2").html(heading + result);
     });
   </script>
 
