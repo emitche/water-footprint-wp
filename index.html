@@ -15,6 +15,12 @@
 
     <div class="result">
     </div>
+
+    <select class="select-item-2">
+    </select>
+
+    <div class="result-2">
+    </div>
   </div>
 
   <script>
@@ -52,6 +58,46 @@
       // var result = "<p class='item-amount'>" + item_amount + "</p><p>uses</p><p class='water-use'>" + water_use + " " + units_label + "</p><p>to produce</p>";
       var result = "<p class='item-amount'>" + item_amount + "</p><p class='water-use'>" + water_use + " " + units_label + "</p>";
       $(".result").html(result);
+    });
+  </script>
+
+  <script>
+    var base_unit = "litre";
+    var display_unit = "gallon";
+
+    // var units_label = measuring_units[units].label;
+
+    var l_to_gal = 0.264172052358;
+
+    $.each(foods, function(food, food_info) {
+      if (food_info.water_use.water_litres) {
+        $('.select-item-2').append(
+          "<option class='item " + food + "' value='" + food + "'>"
+          + food_info.food_name +
+          "</option>"
+        );
+      }
+    });
+
+    // Display water use on user selection
+
+    $('.select-item-2').on('change', function (e) {
+      var choices = this;
+      var item_key = $(choices).val();
+      console.log(item_key);
+      var item = foods[item_key];
+      var litre_info = item.water_use.water_litres;
+      console.log(item);
+
+      if (litre_info) {
+        if (litre_info.per_kg) {
+          console.log("bulk info available for " + item_key);
+        } else if (litre_info.per_serving) {
+          console.log("serving info available for " + item_key);
+        } else {
+          console.log("Litres info not available for " + item_key);
+        }
+      }
     });
   </script>
 
