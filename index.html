@@ -19,10 +19,15 @@
     <select class="select-item-2">
     </select>
 
-    <div class="result-2">
+    <section class="result-2">
+      <h1 class="heading"></h1>
+      <div class="bulk">
+      </div>
       <div class="one-serving">
       </div>
-    </div>
+      <div class="no-info">
+      </div>
+    </section>
   </div>
 
   <script>
@@ -64,6 +69,11 @@
   </script>
 
   <script>
+
+    var preferred_units;
+    // preferred_units = "metric";
+    preferred_units = "us";
+
     var base_unit = "litre";
     var display_unit = "gallon";
 
@@ -88,17 +98,44 @@
       return n;
     }
 
+    function convert_litre_to_gallon(n) {
+      n = n * L_TO_GAL;
+      n = Math.round(n);
+      return n;
+    }
+
+    function convert_kg_to_lb(n) {
+      n = n / KG_TO_LB;
+      n = Math.round(n);
+      return n;
+    }
+
+    function process_units(units) {
+      if (units == "us") {
+
+      } else {
+
+      }
+    }
+
+    function display_water_use(food_unit, water_amount, water_unit) {
+      text = "<p>" + 1 + " " + food_unit + " = " + water_amount + " " + water_unit + " of water" + "</p>";
+      return text;
+    }
+
     // Display water use on user selection
 
     $('.select-item-2').on('change', function (e) {
       var choices = this;
       var item_key = $(choices).val();
       console.log(item_key);
+
       var item = foods[item_key];
       var litre_info = item.water_use.water_litres;
       console.log(item);
 
-      var heading = "<h1>" + item.food_name + "</h1>";
+      $(".result-2 .heading").html(item.food_name);
+
       var result;
 
       if (litre_info) {
@@ -106,7 +143,9 @@
           console.log("bulk info available for " + item_key);
           var bulk = "<p>" + 1 + " kg = " + litre_info.per_kg + " litres of water" + "</p>";
           var bulk_gallons_lbs = "<p>" + 1 + " lb = " + convert_to_us_units(litre_info.per_kg) + " gallons of water" + "</p>";
-          result = bulk + bulk_gallons_lbs;
+          var test = display_water_use("lb", convert_to_us_units(litre_info.per_kg), "gallons");
+
+          $(".result-2 .bulk").html(bulk + bulk_gallons_lbs + test);
         }
 
         // if (litre_info.per_serving) {
@@ -115,14 +154,12 @@
 
         //   var serving = "<p>" + litre_info.serving.description + "</p>";
         //   result = bulk + serving;
+        // $(".result-2 .one-serving").html(result);
         // }
 
       } else {
-        console.log("Litres info not available for " + item_key);
-        result = "<p>No information available.</p>"
+        $(".result-2 .no-info").html("<p>No information available.</p>");
       }
-
-      $(".result-2").html(heading + result);
     });
   </script>
 
