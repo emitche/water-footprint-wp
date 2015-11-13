@@ -119,12 +119,12 @@
     }
 
     function food_water_use(food_unit, water_amount, water_unit) {
-      text = "<p>" + 1 + " " + food_unit + " = " + water_amount + " " + water_unit + " of water" + "</p>";
+      text = "<p>" + 1 + " " + food_unit + " = " + water_amount + " " + water_unit + " " + of_water + "</p>";
       return text;
     }
 
-    function serving_water_use(serving, food_unit, water_amount, water_unit) {
-      text = "<p>" + 1 + " " + food_unit + "() = " + water_amount + " " + water_unit + " of water" + "</p>";
+    function serving_water_use(serving, serving_amount, serving_unit, water_amount, water_unit) {
+      text = "<p>" + serving + " (" + serving_amount + " " + serving_unit + ")</p>" + "<p>" + water_amount + " " + water_unit + " " + of_water + "</p>";
       return text;
     }
 
@@ -160,7 +160,9 @@
 
           var result = "<p>" + litre_info.serving.description + " (" + litre_info.serving.weight.g + " grams)</p><p>" + litre_info.per_serving + " litres of water" + "</p>";
 
-          $(".result-2 .one-serving").html(result);
+          var test = serving_water_use(litre_info.serving.description, litre_info.serving.weight.g, "grams", litre_info.per_serving, "litres");
+
+          $(".result-2 .one-serving").html(result + test);
         }
 
       } else {
