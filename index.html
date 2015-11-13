@@ -118,8 +118,13 @@
       }
     }
 
-    function display_water_use(food_unit, water_amount, water_unit) {
+    function food_water_use(food_unit, water_amount, water_unit) {
       text = "<p>" + 1 + " " + food_unit + " = " + water_amount + " " + water_unit + " of water" + "</p>";
+      return text;
+    }
+
+    function serving_water_use(serving, food_unit, water_amount, water_unit) {
+      text = "<p>" + 1 + " " + food_unit + "() = " + water_amount + " " + water_unit + " of water" + "</p>";
       return text;
     }
 
@@ -143,19 +148,20 @@
           console.log("bulk info available for " + item_key);
           var bulk = "<p>" + 1 + " kg = " + litre_info.per_kg + " litres of water" + "</p>";
           var bulk_gallons_lbs = "<p>" + 1 + " lb = " + convert_to_us_units(litre_info.per_kg) + " gallons of water" + "</p>";
-          var test = display_water_use("lb", convert_to_us_units(litre_info.per_kg), "gallons");
+          var test = food_water_use("lb", convert_to_us_units(litre_info.per_kg), "gallons");
 
           $(".result-2 .bulk").html(bulk + bulk_gallons_lbs + test);
         }
 
-        // if (litre_info.per_serving) {
-        //   console.log("serving info available for " + item_key);
-        //   // var serving = "<p>" + litre_info.serving.description + " (" + litre_info.serving.weight + " grams) " + "uses" + litre_info.per_serving + " litres to produce" + "</p>";
+        if (litre_info.per_serving) {
+          console.log("serving info available for " + item_key);
 
-        //   var serving = "<p>" + litre_info.serving.description + "</p>";
-        //   result = bulk + serving;
-        // $(".result-2 .one-serving").html(result);
-        // }
+          // var serving = "<p>" + litre_info.serving.description + " (" + litre_info.serving.weight.g + " grams) " + "uses " + litre_info.per_serving + " litres of water to produce" + "</p>";
+
+          var result = "<p>" + litre_info.serving.description + " (" + litre_info.serving.weight.g + " grams)</p><p>" + litre_info.per_serving + " litres of water" + "</p>";
+
+          $(".result-2 .one-serving").html(result);
+        }
 
       } else {
         $(".result-2 .no-info").html("<p>No information available.</p>");
