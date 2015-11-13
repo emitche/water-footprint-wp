@@ -10,12 +10,6 @@
 
 <body>
   <div class="water-footprint">
-    <select class="select-item">
-    </select>
-
-    <div class="result">
-    </div>
-
     <select class="select-item-2">
     </select>
 
@@ -29,44 +23,6 @@
       </div>
     </section>
   </div>
-
-  <script>
-    // console.log(foods);
-
-    var units = "gallons";
-    var units_label = measuring_units[units].label;
-    // console.log(units_label);
-
-    // $.each(foods, function(food, food_info) {
-    //   console.log(food_info.water_use[units]);
-    // });
-
-    // Load each food
-
-    $.each(foods, function(food, food_info) {
-      if (food_info.water_use.gallons) {
-        $('.select-item').append(
-          "<option class='item " + food + "' value='" + food + "'>"
-          + food_info.food_name +
-          "</option>"
-        );
-      }
-    });
-
-    // Display water use on user selection
-
-    $('.select-item').on('change', function (e) {
-      var choices = this;
-      var item = $(choices).val();
-      console.log(item);
-      var item_amount = foods[item].water_use[units].serving;
-      var water_use = foods[item].water_use[units].water;
-      // var result = "<p>" + serving + " uses " + water_use + " " + units_label + "</p>";
-      // var result = "<p class='item-amount'>" + item_amount + "</p><p>uses</p><p class='water-use'>" + water_use + " " + units_label + "</p><p>to produce</p>";
-      var result = "<p class='item-amount'>" + item_amount + "</p><p class='water-use'>" + water_use + " " + units_label + "</p>";
-      $(".result").html(result);
-    });
-  </script>
 
   <script>
 
