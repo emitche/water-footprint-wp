@@ -37,16 +37,8 @@ function convert_kg_to_lb(n) {
   return n;
 }
 
-// function process_units(units) {
-//   if (units == "us") {
-
-//   } else {
-
-//   }
-// }
-
 function food_water_use(food_unit, water_amount, water_unit) {
-  text = "<div class='bulk-readout'><p>" + 1 + " " + food_unit + "</p><p>" + water_amount + " " + water_unit + " " + of_water + "</p></div>";
+  text = "<div class='bulk-readout'><p>" + 1 + " " + food_unit + "</p><p class="water">" + water_amount + " " + water_unit + " " + of_water + "</p></div>";
   return text;
 }
 
@@ -70,22 +62,9 @@ $('.select-item-2').on('change', function (e) {
 
   if (litre_info) {
     if (litre_info.per_kg) {
-      // console.log("bulk info available for " + item_key);
-      // var bulk = food_water_use("kg", litre_info.per_kg, "litres");
       var bulk_gallons_lbs = food_water_use("lb", convert_to_us_units(litre_info.per_kg), "gallons");
-
-      // $(".result-2 .bulk").html(bulk + bulk_gallons_lbs);
       $(".result-2 .bulk").html(bulk_gallons_lbs);
     }
-
-    // if (litre_info.per_serving) {
-    //   console.log("serving info available for " + item_key);
-
-    //   var serving = serving_water_use(litre_info.serving.description, litre_info.serving.weight.g, "grams", litre_info.per_serving, "litres");
-
-    //   $(".result-2 .one-serving").html(serving);
-    // }
-
   } else {
     $(".result-2 .no-info").html("<p>No information available.</p>");
   }
