@@ -27,3 +27,10 @@ p {
 .water-amount {
   font-size: 2em;
 }
+
+select {
+  font-size: 1.1em;
+  height: 2em;
+  width: 20%;
+  min-width: 200px;
+}
