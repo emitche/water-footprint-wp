@@ -1,0 +1,17 @@
+p {
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.item-amount {
+  font-size: 2.5em;
+}
+
+.water-use {
+  font-size: 4em;
+}
+
+.item-amount, .water-use {
+  font-weight: bold;
+  text-transform: uppercase;
+}
