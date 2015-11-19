@@ -47,12 +47,12 @@ function process_units(units) {
 }
 
 function food_water_use(food_unit, water_amount, water_unit) {
-  text = "<p>" + 1 + " " + food_unit + " = " + water_amount + " " + water_unit + " " + of_water + "</p>";
+  text = "<div class='bulk-readout'><p>" + 1 + " " + food_unit + "</p><p>" + water_amount + " " + water_unit + " " + of_water + "</p></div>";
   return text;
 }
 
 function serving_water_use(serving, serving_amount, serving_unit, water_amount, water_unit) {
-  text = "<p>" + serving + " (" + serving_amount + " " + serving_unit + ")</p>" + "<p>" + water_amount + " " + water_unit + " " + of_water + "</p>";
+  text = "<div class='serving-readout'><p>" + serving + " (" + serving_amount + " " + serving_unit + ")</p>" + "<p>" + water_amount + " " + water_unit + " " + of_water + "</p></div>";
   return text;
 }
 

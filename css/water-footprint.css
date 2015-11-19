@@ -15,3 +15,7 @@ p {
   font-weight: bold;
   text-transform: uppercase;
 }
+
+.bulk-readout, .serving-readout, .no-info {
+  margin: 10px 0;
+}
