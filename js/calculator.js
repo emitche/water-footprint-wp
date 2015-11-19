@@ -1,11 +1,10 @@
 var preferred_units;
+//preferred_units = "both";
 // preferred_units = "metric";
 preferred_units = "us";
 
 var base_unit = "litre";
 var display_unit = "gallon";
-
-// var units_label = measuring_units[units].label;
 
 var L_TO_GAL = 0.264172052358;
 var KG_TO_LB = 2.205;
@@ -38,13 +37,13 @@ function convert_kg_to_lb(n) {
   return n;
 }
 
-function process_units(units) {
-  if (units == "us") {
+// function process_units(units) {
+//   if (units == "us") {
 
-  } else {
+//   } else {
 
-  }
-}
+//   }
+// }
 
 function food_water_use(food_unit, water_amount, water_unit) {
   text = "<div class='bulk-readout'><p>" + 1 + " " + food_unit + "</p><p>" + water_amount + " " + water_unit + " " + of_water + "</p></div>";
@@ -61,11 +60,9 @@ function serving_water_use(serving, serving_amount, serving_unit, water_amount, 
 $('.select-item-2').on('change', function (e) {
   var choices = this;
   var item_key = $(choices).val();
-  console.log(item_key);
 
   var item = foods[item_key];
   var litre_info = item.water_use.water_litres;
-  console.log(item);
 
   $(".result-2 .heading").html(item.food_name);
 
@@ -73,20 +70,21 @@ $('.select-item-2').on('change', function (e) {
 
   if (litre_info) {
     if (litre_info.per_kg) {
-      console.log("bulk info available for " + item_key);
-      var bulk = food_water_use("kg", litre_info.per_kg, "litres");
+      // console.log("bulk info available for " + item_key);
+      // var bulk = food_water_use("kg", litre_info.per_kg, "litres");
       var bulk_gallons_lbs = food_water_use("lb", convert_to_us_units(litre_info.per_kg), "gallons");
 
-      $(".result-2 .bulk").html(bulk + bulk_gallons_lbs);
+      // $(".result-2 .bulk").html(bulk + bulk_gallons_lbs);
+      $(".result-2 .bulk").html(bulk_gallons_lbs);
     }
 
-    if (litre_info.per_serving) {
-      console.log("serving info available for " + item_key);
+    // if (litre_info.per_serving) {
+    //   console.log("serving info available for " + item_key);
 
-      var serving = serving_water_use(litre_info.serving.description, litre_info.serving.weight.g, "grams", litre_info.per_serving, "litres");
+    //   var serving = serving_water_use(litre_info.serving.description, litre_info.serving.weight.g, "grams", litre_info.per_serving, "litres");
 
-      $(".result-2 .one-serving").html(serving);
-    }
+    //   $(".result-2 .one-serving").html(serving);
+    // }
 
   } else {
     $(".result-2 .no-info").html("<p>No information available.</p>");
