@@ -19,3 +19,11 @@ p {
 .bulk-readout, .serving-readout, .no-info {
   margin: 10px 0;
 }
+
+.heading {
+  font-size: 2.25em;
+}
+
+.water-amount {
+  font-size: 2em;
+}
