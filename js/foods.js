@@ -1,20 +1,4 @@
 var foods = {
-  "food": {
-    "food_name": "food",
-    "water_use": {
-      "water_litres": {
-        "per_kg": 1,
-        "per_serving": 1,
-        "serving": {
-          "description": "one serving",
-          "weight": {
-            "g": 1,
-          }
-        }
-      }
-    }
-  },
-
   "apple": {
     "food_name": "apple",
     "water_use": {

@@ -11,7 +11,7 @@ var KG_TO_LB = 2.205;
 
 $.each(foods, function(food, food_info) {
   if (food_info.water_use.water_litres) {
-    $('.select-item-2').append(
+    $('.select-item').append(
       "<option class='item " + food + "' value='" + food + "'>"
       + food_info.food_name +
       "</option>"
@@ -49,23 +49,23 @@ function serving_water_use(serving, serving_amount, serving_unit, water_amount, 
 
 // Display water use on user selection
 
-$('.select-item-2').on('change', function (e) {
+$('.select-item').on('change', function (e) {
   var choices = this;
   var item_key = $(choices).val();
 
   var item = foods[item_key];
   var litre_info = item.water_use.water_litres;
 
-  $(".result-2 .heading").html(item.food_name);
+  $(".result .heading").html(item.food_name);
 
   var result;
 
   if (litre_info) {
     if (litre_info.per_kg) {
       var bulk_gallons_lbs = food_water_use("lb", convert_to_us_units(litre_info.per_kg), "gallons");
-      $(".result-2 .bulk").html(bulk_gallons_lbs);
+      $(".result .bulk").html(bulk_gallons_lbs);
     }
   } else {
-    $(".result-2 .no-info").html("<p>No information available.</p>");
+    $(".result .no-info").html("<p>No information available.</p>");
   }
 });

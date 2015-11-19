@@ -1,25 +1,32 @@
 p {
-  margin: 0;
   font-size: 1.1em;
 }
 
-.item-amount {
-  font-size: 2.5em;
+select {
+  font-size: 1.1em;
+  height: 2em;
+  width: 20%;
+  min-width: 200px;
 }
 
-.water-use {
-  font-size: 4em;
+/* Heading and Instructions */
+header {
+  margin: 50px 0 25px;
 }
 
-.item-amount, .water-use {
-  font-weight: bold;
-  text-transform: uppercase;
+.instructions {
+  font-size: 1.25em;
 }
 
-.bulk-readout, .serving-readout, .no-info {
-  margin: 10px 0;
+.credits {
+  font-size: .9em;
 }
 
+.result p {
+  margin: 0;
+}
+
+/* Water Footprint Readout */
 .heading {
   font-size: 2.25em;
 }
@@ -28,9 +35,6 @@ p {
   font-size: 2em;
 }
 
-select {
-  font-size: 1.1em;
-  height: 2em;
-  width: 20%;
-  min-width: 200px;
+.bulk-readout, .serving-readout, .no-info {
+  margin: 10px 0;
 }
