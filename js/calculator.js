@@ -38,7 +38,7 @@ function convert_kg_to_lb(n) {
 }
 
 function food_water_use(food_unit, water_amount, water_unit) {
-  text = "<div class='bulk-readout'><p>" + 1 + " " + food_unit + "</p><p class="water">" + water_amount + " " + water_unit + " " + of_water + "</p></div>";
+  text = "<div class='bulk-readout'><p>" + 1 + " " + food_unit + "</p><p>" + water_amount + " " + water_unit + " " + of_water + "</p></div>";
   return text;
 }
 
