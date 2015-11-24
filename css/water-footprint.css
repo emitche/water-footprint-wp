@@ -10,12 +10,19 @@ select {
   font-size: 1.1em;
   height: 2em;
   width: 20%;
-  min-width: 200px;
+  min-width: 12.5em;
+}
+
+@media screen and (max-width:29em) {
+  select {
+    width: 100%;
+    min-width: 100%;
+  }
 }
 
 /* Heading and Instructions */
 header {
-  margin: 50px 0 25px;
+  margin: 3.125em 0 1.625em;
 }
 
 .instructions {
@@ -40,5 +47,5 @@ header {
 }
 
 .bulk-readout, .serving-readout, .no-info {
-  margin: 10px 0;
+  margin: .625em 0;
 }
