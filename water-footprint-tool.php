@@ -12,7 +12,7 @@ Version: 0.1
 Author URI: http://github.com/emitche
 */
 
-defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
+# defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
 function water_footprint_shortcode() {
     return load_water_footprint();
