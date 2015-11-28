@@ -3,9 +3,8 @@
 <link rel="stylesheet" type="text/css"
   href="<?php echo $url ?>/water-footprint-wp/css/water-footprint.css" />
 <script src="<?php echo $url ?>/water-footprint-wp/js/jquery-1.11.3.min.js"></script>
-<script src="<?php echo $url ?>/water-footprint-wp/js/units.js"></script>
 <script src="<?php echo $url ?>/water-footprint-wp/js/foods.js"></script>
-<script src="<?php echo $url ?>/water-footprint-wp/js/calculator.js"></script>
+<script src="<?php echo $url ?>/water-footprint-wp/js/units.js"></script>
 
 <section class="water-footprint">
   <header>
@@ -28,3 +27,5 @@
     </div>
   </section>
 </section>
+
+<script src="<?php echo $url ?>/water-footprint-wp/js/calculator.js"></script>
