@@ -1,12 +1,11 @@
 <?php $url = plugins_url(); ?>
-<?php $plugin = "water-footprint-wp" ?>
 
 <link rel="stylesheet" type="text/css"
-  href="<?php $url ?>/<?php $plugin ?>/css/water-footprint.css" />
-<script src="<?php $url ?>/<?php $plugin ?>/js/jquery-1.11.3.min.js"></script>
-<script src="<?php $url ?>/<?php $plugin ?>/js/units.js"></script>
-<script src="<?php $url ?>/<?php $plugin ?>/js/foods.js"></script>
-<script src="<?php $url ?>/<?php $plugin ?>/js/calculator.js"></script>
+  href="<?php echo $url ?>/water-footprint-wp/css/water-footprint.css" />
+<script src="<?php echo $url ?>/water-footprint-wp/js/jquery-1.11.3.min.js"></script>
+<script src="<?php echo $url ?>/water-footprint-wp/js/units.js"></script>
+<script src="<?php echo $url ?>/water-footprint-wp/js/foods.js"></script>
+<script src="<?php echo $url ?>/water-footprint-wp/js/calculator.js"></script>
 
 <section class="water-footprint">
   <header>
