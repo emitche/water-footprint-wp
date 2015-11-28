@@ -1,8 +1,9 @@
-<link rel="stylesheet" type="text/css" href="css/water-footprint.css" />
-<script src="js/jquery-1.11.3.min.js"></script>
-<script src="js/foods.js"></script>
-<script src="js/units.js"></script>
-<script src="js/calculator.js"></script>
+<link rel="stylesheet" type="text/css"
+  href="<?php plugin_dir_path('css/water-footprint.css'); ?>" />
+<script src="<?php plugin_dir_path('js/jquery-1.11.3.min.js'); ?>"></script>
+<script src="<?php plugin_dir_path('js/units.js'); ?>"></script>
+<script src="<?php plugin_dir_path('js/foods.js'); ?>"></script>
+<script src="<?php plugin_dir_path('js/calculator.js'); ?>"></script>
 
 <section class="water-footprint">
   <header>
