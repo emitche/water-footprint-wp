@@ -29,3 +29,9 @@
   font-size: 2em;
   line-height: 100%;
 }
+
+.water-footprint .select {
+  background: rgb(63,176,214);
+  border-radius: 5px;
+  border: none;
+}
