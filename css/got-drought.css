@@ -15,6 +15,12 @@
   line-height: 100%;
 }
 
+.water-footprint select {
+  background: rgb(63,176,214);
+  border-radius: 5px;
+  border: none;
+}
+
 .water-footprint .result {
   margin: 3em 0;
   text-transform: uppercase;
@@ -28,10 +34,4 @@
 .water-footprint .water-amount {
   font-size: 2em;
   line-height: 100%;
-}
-
-.water-footprint .select {
-  background: rgb(63,176,214);
-  border-radius: 5px;
-  border: none;
 }
