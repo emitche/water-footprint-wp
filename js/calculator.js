@@ -12,7 +12,7 @@ var KG_TO_LB = 2.205;
 $.each(foods, function(food, food_info) {
   if (food_info.water_use.water_litres) {
     $('.water-footprint .select-item').append(
-      "<option class='item " + food + "' value='" + food + "'>"
+      "<option class='food-item " + food + "' value='" + food + "'>"
       + food_info.food_name +
       "</option>"
     );
