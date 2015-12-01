@@ -19,6 +19,22 @@ var foods = {
     }
   },
 
+  "apple_juice": {
+    "food_name": "apple juice",
+    "water_use": {
+      "water_litres": {
+        "per_litre": 1140,
+        "per_serving": 230,
+        "serving": {
+          "description": "one glass of apple juice",
+          "volume": {
+            "ml": 230,
+          }
+        }
+      }
+    }
+  },
+
   "avocado": {
     "food_name": "Avocado",
     "water_use": {
