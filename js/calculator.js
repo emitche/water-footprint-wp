@@ -78,14 +78,16 @@ $('.select-item').on('change', function (e) {
   var result;
 
   if (litre_info) {
+
     if (litre_info.per_kg) {
       var bulk_gallons_lbs = food_water_use("lb", convert_to_us_units(litre_info.per_kg), "gallons");
-      $(".result .bulk-weight").html(bulk_gallons_lbs);
+      $(".result .bulk-weight").html(bulk_gallons_lbs).addClass("primary");
     }
 
     if (litre_info.per_litre) {
       var bulk_gallons_gallons = food_water_use("gallon", convert_litre_to_gallon(litre_info.per_litre), "gallons");
-      $(".result .bulk-volume").html(bulk_gallons_gallons);
+      $(".result .bulk-volume").html(bulk_gallons_gallons).addClass("primary");
+      $(".result .bulk-weight").removeClass("primary").addClass("secondary");
     }
 
     if (litre_info.per_serving) {

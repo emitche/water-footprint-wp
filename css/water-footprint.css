@@ -47,5 +47,10 @@ header {
 }
 
 .bulk-readout, .serving-readout, .no-info {
-  margin: .625em 0;
+  margin: 1em 0;
+}
+
+.secondary {
+  margin-top: 2em;
+  font-size: 80%;
 }
