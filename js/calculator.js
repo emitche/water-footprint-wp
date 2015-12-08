@@ -58,8 +58,8 @@ function serving_water_use(serving, serving_amount, serving_unit, water_amount, 
 
 function reset_content() {
   $(".result .heading").html("");
-  $(".result .bulk-volume").html("");
-  $(".result .bulk-weight").html("");
+  $(".result .bulk-volume").html("").removeClass("primary");
+  $(".result .bulk-weight").html("").removeClass("primary secondary");
   $(".result .one-serving").html("");
 }
 
