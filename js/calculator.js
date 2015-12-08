@@ -27,6 +27,8 @@ function convert_units(n) {
 }
 
 function convert_to_us_units(n) {
+  // n = convert_litre_to_gallon(n)
+  // n = n / KG_TO_LB;
   n = n * L_TO_GAL / KG_TO_LB;
   n = Math.round(n);
   return n;

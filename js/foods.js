@@ -74,6 +74,38 @@ var foods = {
     }
   },
 
+  "beer": {
+    "food_name": "beverage",
+    "water_use": {
+      "water_litres": {
+        "per_litre": 298,
+        "per_serving": 74,
+        "serving": {
+          "description": "one glass of beer",
+          "volume": {
+            "ml": 250,
+          }
+        }
+      }
+    }
+  },
+
+  "black_tea": {
+    "food_name": "black tea",
+    "water_use": {
+      "water_litres": {
+        "per_kg": 8860,
+        "per_serving": 27,
+        "serving": {
+          "description": "one cup of black tea (steeped)",
+          "volume": {
+            "ml": 250,
+          }
+        }
+      }
+    }
+  },
+
   "bread": {
     "food_name": "bread (from wheat)",
     "water_use": {
@@ -202,7 +234,14 @@ var foods = {
     "food_name": "milk (from cow)",
     "water_use": {
       "water_litres": {
-        "per_kg": 1020
+        "per_kg": 1020,
+        "per_serving": 255,
+        "serving": {
+          "description": "one glass of milk",
+          "volume": {
+            "ml": 250,
+          }
+        }
       }
     }
   },
@@ -212,6 +251,22 @@ var foods = {
     "water_use": {
       "water_litres": {
         "per_kg": 560
+      }
+    }
+  },
+
+  "orange_juice": {
+    "food_name": "orange juice",
+    "water_use": {
+      "water_litres": {
+        "per_litre": 1020,
+        "per_serving": 200,
+        "serving": {
+          "description": "one glass of orange juice",
+          "volume": {
+            "ml": 200,
+          }
+        }
       }
     }
   },
@@ -316,15 +371,6 @@ var foods = {
     "water_use": {
       "water_litres": {
         "per_kg": 1782,
-      }
-    }
-  },
-
-  "black_tea": {
-    "food_name": "black tea, dry",
-    "water_use": {
-      "water_litres": {
-        "per_kg": 8860,
       }
     }
   },
