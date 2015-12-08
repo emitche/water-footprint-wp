@@ -95,6 +95,7 @@ var foods = {
     "water_use": {
       "water_litres": {
         "per_kg": 8860,
+        "per_litre": 108, // Calculated from serving
         "per_serving": 27,
         "serving": {
           "description": "one cup of black tea (steeped)",
@@ -235,6 +236,7 @@ var foods = {
     "water_use": {
       "water_litres": {
         "per_kg": 1020,
+        "per_litre": 1000, // Calculated from serving
         "per_serving": 255,
         "serving": {
           "description": "one glass of milk",
