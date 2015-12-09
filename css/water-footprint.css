@@ -45,5 +45,10 @@
 .water-footprint .bulk-readout,
 .water-footprint .serving-readout,
 .water-footprint .no-info {
-  margin: .625em 0;
+  margin: 1em 0;
+}
+
+.water-footprint .secondary {
+  margin-top: 2em;
+  font-size: 80%;
 }

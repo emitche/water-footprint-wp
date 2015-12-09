@@ -15,13 +15,14 @@
   </header>
 
   <select class="select-item">
+    <option></option>
   </select>
 
   <section class="result">
     <h1 class="heading"></h1>
-    <div class="bulk">
+    <div class="bulk-volume">
     </div>
-    <div class="one-serving">
+    <div class="bulk-weight">
     </div>
     <div class="no-info">
     </div>

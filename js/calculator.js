@@ -1,7 +1,6 @@
-var preferred_units;
-//preferred_units = "both";
-// preferred_units = "metric";
-preferred_units = "us";
+var UNITS;
+// UNITS = "metric";
+UNITS = "us";
 
 var base_unit = "litre";
 var display_unit = "gallon";
@@ -18,6 +17,14 @@ $.each(foods, function(food, food_info) {
     );
   }
 });
+
+function convert_units(n) {
+  if (UNITS == "us") {
+    convert_to_us_units(n);
+  }
+
+  return n;
+}
 
 function convert_to_us_units(n) {
   n = n * L_TO_GAL / KG_TO_LB;
@@ -47,9 +54,17 @@ function serving_water_use(serving, serving_amount, serving_unit, water_amount, 
   return text;
 }
 
+function reset_content() {
+  $(".result .heading").html("");
+  $(".result .bulk-volume").html("").removeClass("primary");
+  $(".result .bulk-weight").html("").removeClass("primary secondary");
+  $(".result .one-serving").html("");
+}
+
 // Display water use on user selection
 
 $('.select-item').on('change', function (e) {
+  reset_content();
   var choices = this;
   var item_key = $(choices).val();
 
@@ -61,10 +76,18 @@ $('.select-item').on('change', function (e) {
   var result;
 
   if (litre_info) {
+
     if (litre_info.per_kg) {
       var bulk_gallons_lbs = food_water_use("lb", convert_to_us_units(litre_info.per_kg), "gallons");
-      $(".water-footprint .result .bulk").html(bulk_gallons_lbs);
+      $(".water-footprint .result .bulk-weight").html(bulk_gallons_lbs).addClass("primary");
     }
+
+    if (litre_info.per_litre) {
+      var bulk_gallons_gallons = food_water_use("gallon", convert_litre_to_gallon(litre_info.per_litre), "gallons");
+      $(".result .bulk-volume").html(bulk_gallons_gallons).addClass("primary");
+      $(".result .bulk-weight").removeClass("primary").addClass("secondary");
+    }
+
   } else {
     $(".water-footprint .result .no-info").html("<p>No information available.</p>");
   }
