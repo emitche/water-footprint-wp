@@ -27,8 +27,6 @@ function convert_units(n) {
 }
 
 function convert_to_us_units(n) {
-  // n = convert_litre_to_gallon(n)
-  // n = n / KG_TO_LB;
   n = n * L_TO_GAL / KG_TO_LB;
   n = Math.round(n);
   return n;
@@ -90,11 +88,6 @@ $('.select-item').on('change', function (e) {
       $(".result .bulk-weight").removeClass("primary").addClass("secondary");
     }
 
-    if (litre_info.per_serving) {
-      // var serving_gallons = serving_water_use(litre_info.serving.description, )
-      // console.log("There is serving info");
-      // $(".result .one-serving").html("There is serving info.");
-    }
   } else {
     $(".result .no-info").html("<p>No information available.</p>");
   }
