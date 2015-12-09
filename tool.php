@@ -2,6 +2,8 @@
 
 <link rel="stylesheet" type="text/css"
   href="<?php echo $url ?>/water-footprint-wp/css/water-footprint.css" />
+<link rel="stylesheet" type="text/css"
+  href="<?php echo $url ?>/water-footprint-wp/css/got-drought.css" />
 <script src="<?php echo $url ?>/water-footprint-wp/js/jquery-1.11.3.min.js"></script>
 <script src="<?php echo $url ?>/water-footprint-wp/js/foods.js"></script>
 <script src="<?php echo $url ?>/water-footprint-wp/js/units.js"></script>
