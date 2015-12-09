@@ -55,10 +55,10 @@ function serving_water_use(serving, serving_amount, serving_unit, water_amount, 
 }
 
 function reset_content() {
-  $(".result .heading").html("");
-  $(".result .bulk-volume").html("").removeClass("primary");
-  $(".result .bulk-weight").html("").removeClass("primary secondary");
-  $(".result .one-serving").html("");
+  $(".water-footprint .result .heading").html("");
+  $(".water-footprint .result .bulk-volume").html("").removeClass("primary");
+  $(".water-footprint .result .bulk-weight").html("").removeClass("primary secondary");
+  $(".water-footprint .result .one-serving").html("");
 }
 
 // Display water use on user selection
@@ -84,8 +84,8 @@ $('.select-item').on('change', function (e) {
 
     if (litre_info.per_litre) {
       var bulk_gallons_gallons = food_water_use("gallon", convert_litre_to_gallon(litre_info.per_litre), "gallons");
-      $(".result .bulk-volume").html(bulk_gallons_gallons).addClass("primary");
-      $(".result .bulk-weight").removeClass("primary").addClass("secondary");
+      $(".water-footprint .result .bulk-volume").html(bulk_gallons_gallons).addClass("primary");
+      $(".water-footprint .result .bulk-weight").removeClass("primary").addClass("secondary");
     }
 
   } else {
