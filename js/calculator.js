@@ -10,8 +10,8 @@ var KG_TO_LB = 2.205;
 
 $.each(foods, function(food, food_info) {
   if (food_info.water_use.water_litres) {
-    $('.select-item').append(
-      "<option class='item " + food + "' value='" + food + "'>"
+    $('.water-footprint .select-item').append(
+      "<option class='food-item " + food + "' value='" + food + "'>"
       + food_info.food_name +
       "</option>"
     );
@@ -55,10 +55,10 @@ function serving_water_use(serving, serving_amount, serving_unit, water_amount, 
 }
 
 function reset_content() {
-  $(".result .heading").html("");
-  $(".result .bulk-volume").html("").removeClass("primary");
-  $(".result .bulk-weight").html("").removeClass("primary secondary");
-  $(".result .one-serving").html("");
+  $(".water-footprint .result .heading").html("");
+  $(".water-footprint .result .bulk-volume").html("").removeClass("primary");
+  $(".water-footprint .result .bulk-weight").html("").removeClass("primary secondary");
+  $(".water-footprint .result .one-serving").html("");
 }
 
 // Display water use on user selection
@@ -71,7 +71,7 @@ $('.select-item').on('change', function (e) {
   var item = foods[item_key];
   var litre_info = item.water_use.water_litres;
 
-  $(".result .heading").html(item.food_name);
+  $(".water-footprint .result .heading").html(item.food_name);
 
   var result;
 
@@ -79,16 +79,16 @@ $('.select-item').on('change', function (e) {
 
     if (litre_info.per_kg) {
       var bulk_gallons_lbs = food_water_use("lb", convert_to_us_units(litre_info.per_kg), "gallons");
-      $(".result .bulk-weight").html(bulk_gallons_lbs).addClass("primary");
+      $(".water-footprint .result .bulk-weight").html(bulk_gallons_lbs).addClass("primary");
     }
 
     if (litre_info.per_litre) {
       var bulk_gallons_gallons = food_water_use("gallon", convert_litre_to_gallon(litre_info.per_litre), "gallons");
-      $(".result .bulk-volume").html(bulk_gallons_gallons).addClass("primary");
-      $(".result .bulk-weight").removeClass("primary").addClass("secondary");
+      $(".water-footprint .result .bulk-volume").html(bulk_gallons_gallons).addClass("primary");
+      $(".water-footprint .result .bulk-weight").removeClass("primary").addClass("secondary");
     }
 
   } else {
-    $(".result .no-info").html("<p>No information available.</p>");
+    $(".water-footprint .result .no-info").html("<p>No information available.</p>");
   }
 });

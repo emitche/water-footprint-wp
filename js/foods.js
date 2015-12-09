@@ -75,7 +75,7 @@ var foods = {
   },
 
   "beer": {
-    "food_name": "beverage",
+    "food_name": "beer",
     "water_use": {
       "water_litres": {
         "per_litre": 298,

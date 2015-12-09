@@ -1,12 +1,8 @@
-body {
-  font-family: Arial, Serif;
-}
-
-p {
+.water-footprint p {
   font-size: 1.1em;
 }
 
-select {
+.water-footprint select {
   font-size: 1.1em;
   height: 2em;
   width: 20%;
@@ -14,43 +10,45 @@ select {
 }
 
 @media screen and (max-width:29em) {
-  select {
+  .water-footprint select {
     width: 100%;
     min-width: 100%;
   }
 }
 
 /* Heading and Instructions */
-header {
+.water-footprint header {
   margin: 3.125em 0 1.625em;
 }
 
-.instructions {
+.water-footprint .instructions {
   font-size: 1.25em;
 }
 
-.credits {
+.water-footprint .credits {
   font-size: .9em;
 }
 
-.result p {
+.water-footprint .result p {
   margin: 0;
 }
 
 /* Water Footprint Readout */
-.heading {
+.water-footprint .heading {
   font-size: 2.25em;
 }
 
-.water-amount {
+.water-footprint .water-amount {
   font-size: 2em;
 }
 
-.bulk-readout, .serving-readout, .no-info {
+.water-footprint .bulk-readout,
+.water-footprint .serving-readout,
+.water-footprint .no-info {
   margin: 1em 0;
 }
 
-.secondary {
+.water-footprint .secondary {
   margin-top: 2em;
   font-size: 80%;
 }
