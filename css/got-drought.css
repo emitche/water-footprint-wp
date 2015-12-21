@@ -3,6 +3,7 @@
 .water-footprint {
   line-height: 100%;
   margin: 1em 0;
+  color: white;
 }
 
 .water-footprint p {
@@ -17,6 +18,7 @@
 .water-footprint select {
   border-radius: 5px;
   border: none;
+  color: #666;
 }
 
 .water-footprint .result {
