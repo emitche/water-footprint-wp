@@ -8,6 +8,9 @@ var display_unit = "gallon";
 var L_TO_GAL = 0.264172052358;
 var KG_TO_LB = 2.205;
 
+
+// Populates list of foods inside select
+
 $.each(foods, function(food, food_info) {
   if (food_info.water_use.water_litres) {
     $('.water-footprint .select-item').append(
@@ -17,6 +20,23 @@ $.each(foods, function(food, food_info) {
     );
   }
 });
+
+
+// Populates list of foods inside input
+
+var food_names = [];
+
+$.each(foods, function(food, food_info) {
+  if (food_info.water_use.water_litres) {
+    food_names.push(food_info.food_name);
+  }
+});
+
+$(".choose-item").autocomplete({
+  source: food_names,
+});
+
+
 
 function convert_units(n) {
   if (UNITS == "us") {
