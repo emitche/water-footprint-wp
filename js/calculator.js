@@ -91,21 +91,6 @@ $.each(foods, function(food, food_info) {
 });
 
 
-// Populates list of foods inside input
-var food_names = [];
-
-$.each(foods, function(food, food_info) {
-  if (food_info.water_use.water_litres) {
-    // food_names.push({label: food_info.food_name, value: food});
-    food_names.push(food_info.food_name);
-  }
-});
-
-$(".choose-item").autocomplete({
-  source: food_names,
-});
-
-
 // Display water use on user selection
 
 $('.select-item').on('change', function (e) {
@@ -116,25 +101,24 @@ $('.select-item').on('change', function (e) {
   update_displayed_content(item);
 });
 
-$(".choose-item").change(function() {
-  reset_content();
-  var food_name = $(this).val();
-  var item;
+// Populates list of foods inside input
+var food_names = [];
 
-  $.each(foods, function(food, food_info) {
-    if (food_info.food_name === food_name) {
-      item = food_info;
-    }
-  });
+$.each(foods, function (food, food_info) {
+  if (food_info.water_use.water_litres) {
+    food_names.push({label: food_info.food_name, value: food});
+  }
+});
 
-  // $.each(food_names, function(obj, keys) {
-  //   if (keys.label == food_name) {
-  //     food_key = keys.value;
-  //   }
-  // });
-
-  console.log(item);
-  // console.log(food_key);
-
-  update_displayed_content(item);
+$(".choose-item").autocomplete({
+  source: food_names,
+  focus: function (event, ui) {
+    $( ".choose-item" ).val(ui.item.label);
+    return false;
+  },
+  select: function (event, ui) {
+    item = foods[ui.item.value];
+    update_displayed_content(item);
+    return false;
+  }
 });
