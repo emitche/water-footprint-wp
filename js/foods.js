@@ -161,6 +161,15 @@ var foods = {
     }
   },
 
+  "corn": {
+    "food_name": "corn",
+    "water_use": {
+      "water_litres": {
+        "per_kg": 1222
+      }
+    }
+  },
+
   "cucumber": {
     "food_name": "cucumber",
     "water_use": {
@@ -218,15 +227,6 @@ var foods = {
     "water_use": {
       "water_litres": {
         "per_kg": 237
-      }
-    }
-  },
-
-  "corn": {
-    "food_name": "corn",
-    "water_use": {
-      "water_litres": {
-        "per_kg": 1222
       }
     }
   },
