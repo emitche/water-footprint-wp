@@ -92,7 +92,6 @@ $.each(foods, function(food, food_info) {
 
 
 // Display water use on user selection
-
 $('.select-item').on('change', function (e) {
   reset_content();
   var item_key = $(this).val();
