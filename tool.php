@@ -2,7 +2,7 @@
 
 <link rel="stylesheet" type="text/css"
   href="<?php echo $url ?>/water-footprint-wp/css/water-footprint.css" />
-<script src="<?php echo $url ?>/water-footprint-wp/js/jquery-1.11.3.min.js"></script>
+<script src="<?php echo $url ?>/water-footprint-wp/vendor/jquery/jquery-1.11.3.min.js"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo $url ?>/water-footprint-wp/vendor/jquery-ui/jquery-ui.min.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo $url ?>/water-footprint-wp/vendor/jquery-ui/jquery-ui.structure.min.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo $url ?>/water-footprint-wp/vendor/jquery-ui/jquery-ui.theme.min.css" />
