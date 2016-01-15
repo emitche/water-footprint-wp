@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Water_Footprint
- * @version 0.1
+ * @version 0.2
  */
 /*
 Plugin Name: Water Footprint
 Plugin URI: http://github.com/emitche/water-footprint-wp/
 Description: A simple plugin to display the water footprint of specific foods.
 Author: Elizabeth Mitchell
-Version: 0.1
+Version: 0.2
 Author URI: http://github.com/emitche
 */
 
