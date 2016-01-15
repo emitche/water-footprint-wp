@@ -8,21 +8,10 @@ var display_unit = "gallon";
 var L_TO_GAL = 0.264172052358;
 var KG_TO_LB = 2.205;
 
-$.each(foods, function(food, food_info) {
-  if (food_info.water_use.water_litres) {
-    $('.water-footprint .select-item').append(
-      "<option class='food-item " + food + "' value='" + food + "'>"
-      + food_info.food_name +
-      "</option>"
-    );
-  }
-});
-
 function convert_units(n) {
   if (UNITS == "us") {
     convert_to_us_units(n);
   }
-
   return n;
 }
 
@@ -55,22 +44,18 @@ function serving_water_use(serving, serving_amount, serving_unit, water_amount, 
 }
 
 function reset_content() {
+  console.log("Reset content");
   $(".water-footprint .result .heading").html("");
   $(".water-footprint .result .bulk-volume").html("").removeClass("primary");
   $(".water-footprint .result .bulk-weight").html("").removeClass("primary secondary");
   $(".water-footprint .result .one-serving").html("");
 }
 
-// Display water use on user selection
-
-$('.select-item').on('change', function (e) {
-  reset_content();
-  var choices = this;
-  var item_key = $(choices).val();
-
-  var item = foods[item_key];
+function update_displayed_content(item) {
+  console.log("Updating displayed content");
   var litre_info = item.water_use.water_litres;
-
+  console.log(item);
+  console.log(litre_info);
   $(".water-footprint .result .heading").html(item.food_name);
 
   var result;
@@ -90,5 +75,49 @@ $('.select-item').on('change', function (e) {
 
   } else {
     $(".water-footprint .result .no-info").html("<p>No information available.</p>");
+  }
+}
+
+
+// Populates list of foods inside select
+$.each(foods, function(food, food_info) {
+  if (food_info.water_use.water_litres) {
+    $('.water-footprint .select-item').append(
+      "<option class='food-item " + food + "' value='" + food + "'>"
+      + food_info.food_name +
+      "</option>"
+    );
+  }
+});
+
+
+// Display water use on user selection
+$('.select-item').on('change', function (e) {
+  reset_content();
+  var item_key = $(this).val();
+  var item = foods[item_key];
+
+  update_displayed_content(item);
+});
+
+// Populates list of foods inside input
+var food_names = [];
+
+$.each(foods, function (food, food_info) {
+  if (food_info.water_use.water_litres) {
+    food_names.push({label: food_info.food_name, value: food});
+  }
+});
+
+$(".choose-item").autocomplete({
+  source: food_names,
+  focus: function (event, ui) {
+    $( ".choose-item" ).val(ui.item.label);
+    return false;
+  },
+  select: function (event, ui) {
+    item = foods[ui.item.value];
+    update_displayed_content(item);
+    return false;
   }
 });

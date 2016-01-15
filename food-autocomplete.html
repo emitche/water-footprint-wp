@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Water Footprint</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Elizabeth Mitchell">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/water-footprint.css" />
+  <script src="vendor/jquery/jquery-1.11.3.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="vendor/jquery-ui/jquery-ui.min.css" />
+  <link rel="stylesheet" type="text/css" href="vendor/jquery-ui/jquery-ui.structure.min.css" />
+  <link rel="stylesheet" type="text/css" href="vendor/jquery-ui/jquery-ui.theme.min.css" />
+  <script src="vendor/jquery-ui-autocomplete/jquery-ui.min.js"></script>
+  <script src="js/foods.js"></script>
+  <script src="js/units.js"></script>
+</head>
+
+<body>
+  <h1>Water Footprint Tool</h1>
+  <p>This features uses jQuery UI autocomplete for text prediction in choosing foods.</p>
+  <p>Alternative: <a href="index.html">default functionality</a></p>
+
+  <section class="water-footprint">
+    <header>
+      <h1>How thirsty is your food?</h1>
+      <p class="instructions">Select an item below to display the amount of water used to produce the food.</p>
+
+      <p class="credits">All water footprint statistics are from The Water Footprint Network's <a href="http://waterfootprint.org/en/resources/interactive-tools/product-gallery/" target="_blank">interactive tool</a>.</p>
+    </header>
+
+    <input class="choose-item" value="" />
+
+    <section class="result">
+      <h1 class="heading"></h1>
+      <div class="bulk-volume">
+      </div>
+      <div class="bulk-weight">
+      </div>
+      <div class="one-serving">
+      </div>
+      <div class="no-info">
+      </div>
+    </section>
+    </section>
+  </section>
+
+  <script src="js/calculator.js"></script>
+</body>
+</html>

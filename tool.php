@@ -4,7 +4,11 @@
   href="<?php echo $url ?>/water-footprint-wp/css/water-footprint.css" />
 <link rel="stylesheet" type="text/css"
   href="<?php echo $url ?>/water-footprint-wp/css/got-drought.css" />
-<script src="<?php echo $url ?>/water-footprint-wp/js/jquery-1.11.3.min.js"></script>
+<script src="<?php echo $url ?>/water-footprint-wp/vendor/jquery/jquery-1.11.3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo $url ?>/water-footprint-wp/vendor/jquery-ui/jquery-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo $url ?>/water-footprint-wp/vendor/jquery-ui/jquery-ui.structure.min.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo $url ?>/water-footprint-wp/vendor/jquery-ui/jquery-ui.theme.min.css" />
+<script src="<?php echo $url ?>/water-footprint-wp/vendor/jquery-ui-autocomplete/jquery-ui.min.js"></script>
 <script src="<?php echo $url ?>/water-footprint-wp/js/foods.js"></script>
 <script src="<?php echo $url ?>/water-footprint-wp/js/units.js"></script>
 
@@ -16,9 +20,7 @@
     <p class="credits">All water footprint statistics are from The Water Footprint Network's <a href="http://waterfootprint.org/en/resources/interactive-tools/product-gallery/" target="_blank">interactive tool</a>.</p>
   </header>
 
-  <select class="select-item">
-    <option></option>
-  </select>
+  <input class="choose-item" value="" />
 
   <section class="result">
     <h1 class="heading"></h1>
@@ -26,8 +28,11 @@
     </div>
     <div class="bulk-weight">
     </div>
+    <div class="one-serving">
+    </div>
     <div class="no-info">
     </div>
+  </section>
   </section>
 </section>
 
