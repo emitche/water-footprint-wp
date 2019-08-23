@@ -20,7 +20,7 @@
     <p class="credits">All water footprint statistics are from The Water Footprint Network's <a href="http://waterfootprint.org/en/resources/interactive-tools/product-gallery/" target="_blank">interactive tool</a>.</p>
   </header>
 
-  <input class="choose-item" value="" />
+  <input type="text" class="choose-item" value="" />
 
   <section class="result">
     <h1 class="heading"></h1>

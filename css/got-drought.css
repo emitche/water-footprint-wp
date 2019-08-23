@@ -47,3 +47,7 @@
 #water-footprint-tool .secondary .water-amount {
   font-size: 1.6em;
 }
+
+#water-footprint-tool input[type="text"] {
+  color: black;
+}
