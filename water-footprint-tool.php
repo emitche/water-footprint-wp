@@ -27,8 +27,8 @@ add_action( 'init', 'water_footprint_register_shortcode' );
 function load_water_footprint(){
   ob_start();
   // tool.php is the standard version. got-drought-tool.php is for Got Drought.
-  include('tool.php');
-  // include('got-drought-tool.php');
+  // include('tool.php');
+  include('got-drought-tool.php');
   return ob_get_clean();
 }
 
