@@ -2,9 +2,9 @@
 
 <link rel="stylesheet" type="text/css"
   href="<?php echo $url ?>/water-footprint-wp/css/water-footprint.css" />
-<link rel="stylesheet" type="text/css" href="<?php echo $url ?>/water-footprint-wp/vendor/jquery-ui/jquery-ui.min.css" />
+<!-- <link rel="stylesheet" type="text/css" href="<?php echo $url ?>/water-footprint-wp/vendor/jquery-ui/jquery-ui.min.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo $url ?>/water-footprint-wp/vendor/jquery-ui/jquery-ui.structure.min.css" />
-<link rel="stylesheet" type="text/css" href="<?php echo $url ?>/water-footprint-wp/vendor/jquery-ui/jquery-ui.theme.min.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo $url ?>/water-footprint-wp/vendor/jquery-ui/jquery-ui.theme.min.css" /> -->
 <script src="<?php echo $url ?>/water-footprint-wp/vendor/jquery-ui-autocomplete/jquery-ui.min.js"></script>
 <script src="<?php echo $url ?>/water-footprint-wp/js/got-drought/foods.js"></script>
 <script src="<?php echo $url ?>/water-footprint-wp/js/units.js"></script>
