@@ -18,7 +18,7 @@
     <p class="instructions">Select an item below to display the amount of water used to produce the food.</p>
   </header>
 
-  <input class="choose-item" value="" />
+  <input type="text" class="choose-item" value="" />
 
   <section class="result">
     <h1 class="heading"></h1>
